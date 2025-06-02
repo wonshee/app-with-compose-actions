@@ -15,6 +15,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+
+# 경로 확인
+    - name: Check current directory
+      run: pwd && ls -al
+      
     - name: Make application-prod.properties
       run: |
         cd ./src/main/resources
