@@ -17,12 +17,12 @@ jobs:
         cache: maven
 
 # 경로 확인
-    - name: Check current directory
-      run: pwd && ls -al
+#    - name: Check current directory
+#      run: pwd && ls -al
       
     - name: Make application-prod.properties
       run: |
-        cd ./src/main/resources
+        cd /home/ubuntu/src/main/resources
         touch ./application.properties
         echo "${{ secrets.PROPERTIES }}" > ./application.properties
       shell: bash
