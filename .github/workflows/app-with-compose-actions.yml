@@ -19,7 +19,14 @@ jobs:
 # 경로 확인
 #    - name: Check current directory
 #      run: pwd && ls -al
-      
+
+
+    - name: Print workspace path
+      run: |
+        echo "GITHUB_WORKSPACE = $GITHUB_WORKSPACE"
+        pwd
+        ls -al
+
     - name: Make application-prod.properties
       run: |
         cd /home/ubuntu/src/main/resources
